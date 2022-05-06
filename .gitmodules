@@ -1,0 +1,3 @@
+[submodule "next-realworld-example-app"]
+	path = next-realworld-example-app
+	url = https://github.com/reck1ess/next-realworld-example-app
