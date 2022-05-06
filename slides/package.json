@@ -1,0 +1,19 @@
+{
+  "name": "slides",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.31.2",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "npm:@nuxt/kit-edge@^3.0.0-rc.2-27530596.a862a67",
+    "cypress": "^4.5.0",
+    "jest": ">=20 <=26"
+  }
+}
