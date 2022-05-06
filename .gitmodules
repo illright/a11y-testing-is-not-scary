@@ -1,0 +1,4 @@
+[submodule "next-realworld-example-app"]
+	path = next-realworld-example-app
+	url = https://github.com/illright/next-realworld-example-app.git
+	branch = a11y
