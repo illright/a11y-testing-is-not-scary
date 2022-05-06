@@ -14,6 +14,7 @@
   "devDependencies": {
     "@nuxt/kit": "npm:@nuxt/kit-edge@^3.0.0-rc.2-27530596.a862a67",
     "cypress": "^4.5.0",
-    "jest": ">=20 <=26"
+    "jest": ">=20 <=26",
+    "playwright-chromium": "^1.21.1"
   }
 }
