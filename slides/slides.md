@@ -110,8 +110,8 @@ class: flex flex-col
 Что здесь важно для пользователя?
 
 <img 
-  src="conduit-screenshot.webp" 
-  alt="Интерфейс сайта Conduit" 
+  src="conduit-home-screenshot.webp" 
+  alt="Интерфейс главной страницы сайта Conduit" 
   class="shadow-xl rounded" 
 />
 
@@ -213,14 +213,14 @@ it('allows going to the page of a post from the main feed', () => {
 
 <div class="flex justify-between h-100">
   <img 
-    src="accessibility-tree.webp" 
-    alt="Дерево доступности сайта Conduit" 
-    class="shadow-xl rounded"
+    src="conduit-home-screenshot.webp" 
+    alt="Интерфейс главной страницы сайта Conduit, опять" 
+    class="shadow-xl rounded w-11/16 self-start"
   />
   <img 
-    src="conduit-screenshot.webp" 
-    alt="Интерфейс сайта Conduit, опять" 
-    class="shadow-xl rounded"
+    src="conduit-home-accessibility-tree.webp" 
+    alt="Дерево доступности главной страницы сайта Conduit" 
+    class="shadow-xl rounded h-full"
   />
 </div>
 
@@ -243,7 +243,7 @@ const MainView = () => (
 );
 ```
 
-![](0-before.webp)
+<img src="0-before.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit до изменений" />
 
 </div>
 
@@ -274,7 +274,7 @@ const MainView = () => (
 );
 ```
 
-![](1-after-feed-highlight.webp)
+<img src="1-after-feed-highlight.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit после создания feed, с выделением измененной части" />
 
 </div>
 
@@ -305,7 +305,7 @@ const ArticlePreview = ({ article }) => {
 };
 ```
 
-![](1-after-feed.webp)
+<img src="1-after-feed.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit после создания feed" />
 
 </div>
 
@@ -336,9 +336,13 @@ const ArticlePreview = ({ article }) => {
 };
 ```
 
-<img src="2-after-article-highlight.webp" class="col-start-2 row-span-full" />
+<img src="2-after-article-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки article, с выделением измененной части" />
+
+<div v-click>
 
 Генерация `headingId` здесь опущена, но с ней может помочь хук `useId()` из React 18 или библиотеки [`@react-aria/utils`](https://react-spectrum.adobe.com/react-aria/useId.html).
+
+</div>
 
 </div>
 
@@ -376,7 +380,7 @@ const Home = () => (
 );
 ```
 
-<img src="2-after-article.webp" class="col-start-2 row-span-full" />
+<img src="2-after-article.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки article" />
 
 </div>
 
@@ -413,7 +417,7 @@ const Home = () => (
 );
 ```
 
-<img src="3-after-aside-highlight.webp" class="col-start-2 row-span-full" />
+<img src="3-after-aside-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки complementary, с выделением измененной части" />
 
 </div>
 
@@ -453,7 +457,7 @@ const TabList = () => {
 };
 ```
 
-<img src="3-after-aside.webp" class="col-start-2 row-span-full" />
+<img src="3-after-aside.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки complementary" />
 
 </div>
 
@@ -493,7 +497,7 @@ const TabList = () => {
 };
 ```
 
-<img src="4-after-tablist-highlight.webp" class="col-start-2 row-span-full" />
+<img src="4-after-tablist-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки tablist, с выделением измененной части" />
 
 </div>
 
