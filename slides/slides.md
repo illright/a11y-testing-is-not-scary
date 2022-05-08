@@ -506,3 +506,203 @@ const TabList = () => {
     grid-template-columns: 1fr 400px;
   }
 </style>
+
+---
+class: flex flex-col
+---
+
+# Успех!
+
+```ts
+// Проверим, что из ленты мы можем перейти к посту
+it('allows going to the page of a post from the main feed', () => {
+  cy.findByRole('article', { name: /Create a new implementation/ }).within(() => {
+    cy.findByRole('link', { name: /Read more/ }).click();
+    cy.url().should('include', '/article/Create-a-new-implementation-1');
+  });
+});
+```
+
+<div class="spacer flex-1" />
+
+<pre class="leading-snug py-4 border-2 border-green-500 rounded-lg">
+  Running:  read-posts.spec.ts                                                            (3 of 3)
+
+  <span class="text-green-500 font-bold">✓</span> lists all posts on the main page (1374ms)
+  <span class="text-green-500 font-bold">✓</span> allows going to the page of a post from the main feed (1798ms)
+  <span class="text-green-500 font-bold">✓</span> presents the title and the content of the post on its page (1352ms)
+
+  <span class="text-green-500 font-bold">3 passing</span> (5s)
+</pre>
+
+<style>
+  pre {
+    --slidev-code-font-size: 0.9rem;
+    --slidev-code-padding: 0.9rem;
+    --slidev-code-line-height: 1.3rem;
+
+    font-size: var(--slidev-code-font-size);
+    line-height: var(--slidev-code-line-height);
+  }
+</style>
+
+---
+
+# Ещё пример
+
+Попробуем протестировать форму регистрации
+
+<div class="flex justify-between h-100">
+  <img
+    src="conduit-sign-up-screenshot.webp" 
+    alt="Интерфейс формы регистрации сайта Conduit" 
+    class="shadow-xl rounded w-11/18 self-start"
+  />
+  <img
+    src="conduit-sign-up-accessibility-tree.webp" 
+    alt="Дерево доступности формы регистрации сайта Conduit" 
+    class="shadow-xl rounded h-full"
+  />
+</div>
+
+---
+
+# Как работать с формами
+
+```ts {1,2,22|1,5,6|1,8,9,10,12|1,3,14,15,16,17,18,19}
+// Проверим, что наша форма отправляет правильные данные
+it('allows signing up with a username, e-mail and password', () => {
+  cy.intercept({ ... }, { ... }).as('signUpRoute');
+
+  cy.visit('/');
+  cy.findByRole('link', { name: /Sign up/ }).click();
+
+  cy.findByRole('textbox', { name: 'Username' }).type(sampleUsername);
+  cy.findByRole('textbox', { name: 'Email' }).type(sampleEmail);
+  cy.findByLabelText('Password').type(samplePassword);
+
+  cy.findByRole('button', { name: 'Sign up' }).click();
+
+  cy.wait('@signUpRoute').then(({ request }) => {
+    expect(request.body).to.have.property('user');
+    expect(request.body.user.username).to.be.equal(sampleUsername);
+    expect(request.body.user.email).to.be.equal(sampleEmail);
+    expect(request.body.user.password).to.be.equal(samplePassword);
+  });
+});
+```
+
+<style>
+  .slidev-code {
+    @apply mt-6 !important;
+  }
+</style>
+
+---
+
+# Это опять не сработает
+
+```tsx
+<form>
+  <fieldset>
+
+    <input placeholder="Username" />
+
+    <input type="email" placeholder="Email" >
+
+    <input type="password" placeholder="Password" />
+
+    <button type="submit">Sign up</button>
+  </fieldset>
+</form>
+```
+
+<div class="bg-red-100 bg-opacity-30 rounded-l rounded-r-lg px-4 py-2 border-l-3 border-red-700 mt-6 mb-4">
+
+⚠️ Плейсхолдеры — не замена доступным меткам!
+
+</div>
+
+<style>
+  .slidev-code {
+    @apply mt-6 !important;
+
+    --slidev-code-font-size: 1rem;
+    --slidev-code-padding: 1rem;
+    --slidev-code-line-height: 1.5rem;
+  }
+</style>
+
+---
+
+# Давайте починим
+
+```tsx {1,2,4,6,8,10,11,12|1,2,3,5,7,10,11,12}
+<form>
+  <fieldset>
+    <label htmlFor="register-form-username">Username</label>
+    <input placeholder="Username" id="register-form-username" />
+    <label htmlFor="register-form-email">Email</label>
+    <input type="email" placeholder="Email" id="register-form-email" >
+    <label htmlFor="register-form-password">Password</label>
+    <input type="password" placeholder="Password" id="register-form-password" />
+
+    <button type="submit">Sign up</button>
+  </fieldset>
+</form>
+```
+
+<div class="bg-red-100 bg-opacity-30 rounded-l rounded-r-lg px-4 py-2 border-l-3 border-red-700 mt-6 mb-4">
+
+⚠️ Плейсхолдеры — не замена доступным меткам!
+
+</div>
+
+<style>
+  .slidev-code {
+    @apply mt-6 !important;
+
+    --slidev-code-font-size: 1rem;
+    --slidev-code-padding: 1rem;
+    --slidev-code-line-height: 1.5rem;
+  }
+</style>
+
+---
+class: flex flex-col
+---
+
+# Успех! №2
+
+```ts
+// Проверим, что наша форма отправляет правильные данные
+it('allows signing up with a username, e-mail and password', () => {
+  // ...
+  cy.findByRole('textbox', { name: 'Username' }).type(sampleUsername);
+  cy.findByRole('textbox', { name: 'Email' }).type(sampleEmail);
+  cy.findByLabelText('Password').type(samplePassword);
+  // ...
+});
+```
+
+<div class="spacer flex-1" />
+
+<pre class="leading-snug py-4 border-2 border-green-500 rounded-lg">
+  Running:  authentication.spec.ts                                                        (1 of 3)
+
+  <span class="text-green-500 font-bold">✓</span> allows signing up with a username, e-mail and password (2961ms)
+
+  <span class="text-green-500 font-bold">1 passing</span> (3s)
+</pre>
+
+<style>
+  pre {
+    --slidev-code-font-size: 0.9rem;
+    --slidev-code-padding: 0.9rem;
+    --slidev-code-line-height: 1.3rem;
+
+    font-size: var(--slidev-code-font-size);
+    line-height: var(--slidev-code-line-height);
+  }
+</style>
+
