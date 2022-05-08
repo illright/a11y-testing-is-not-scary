@@ -205,4 +205,281 @@ it('allows going to the page of a post from the main feed', () => {
   />
 </div>
 
+---
 
+# Давайте исправлять
+
+Шаг 1: Превратим ленту постов в `feed`
+
+<div class="grid gap-4">
+
+```tsx {all|6}
+const MainView = () => (
+  <div className="col-md-9">
+    <div className="feed-toggle">
+      <TabList />
+    </div>
+    <ArticleList />
+  </div>
+);
+```
+
+![](0-before.webp)
+
+</div>
+
+<style>
+  .grid {
+    grid-template-columns: 1fr 400px;
+  }
+</style>
+
+---
+
+# Давайте исправлять
+
+Шаг 1: Превратим ленту постов в `feed`
+
+<div class="grid gap-4">
+
+```tsx {6,7,8}
+const MainView = () => (
+  <div className="col-md-9">
+    <div className="feed-toggle">
+      <TabList />
+    </div>
+    <main role="feed">
+      <ArticleList />
+    </main>
+  </div>
+);
+```
+
+![](1-after-feed-highlight.webp)
+
+</div>
+
+<style>
+  .grid {
+    grid-template-columns: 1fr 400px;
+  }
+</style>
+
+---
+
+# Давайте исправлять
+
+Шаг 2: Превратим посты в `article`-ы
+
+<div class="grid gap-4">
+
+```tsx {all|3,8}
+const ArticlePreview = ({ article }) => {
+  return (
+    <div>
+      {/* ... */}
+      <h1>{preview.title}</h1>
+      <p>{preview.description}</p>
+      <span>Read more...</span>
+    </div>
+  );
+};
+```
+
+![](1-after-feed.webp)
+
+</div>
+
+<style>
+  .grid {
+    grid-template-columns: 1fr 400px;
+  }
+</style>
+
+---
+
+# Давайте исправлять
+
+Шаг 2: Превратим посты в `article`-ы
+
+<div class="grid gap-4">
+
+```tsx {3,5,8}
+const ArticlePreview = ({ article }) => {
+  return (
+    <article aria-labelledby={headingId}>
+      {/* ... */}
+      <h1 id={headingId}>{preview.title}</h1>
+      <p>{preview.description}</p>
+      <span>Read more...</span>
+    </article>
+  );
+};
+```
+
+<img src="2-after-article-highlight.webp" class="col-start-2 row-span-full" />
+
+Генерация `headingId` здесь опущена, но с ней может помочь хук `useId()` из React 18 или библиотеки [`@react-aria/utils`](https://react-spectrum.adobe.com/react-aria/useId.html).
+
+</div>
+
+<style>
+  .grid {
+    grid-template-columns: 1fr 400px;
+    grid-template-rows: auto auto;
+  }
+</style>
+
+---
+
+# Давайте исправлять
+
+Шаг 3: Превратим карточку тэгов в `complementary`
+
+<div class="grid gap-4">
+
+```tsx {all|8,11}
+const Home = () => (
+  <div className="home-page">
+    <Banner />
+    <div className="container page">
+      <div className="row">
+        <MainView />
+        <div className="col-md-3">
+          <div>
+            <p>Popular Tags</p>
+            <Tags />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+```
+
+<img src="2-after-article.webp" class="col-start-2 row-span-full" />
+
+</div>
+
+<style>
+  .grid {
+    grid-template-columns: 1fr 400px;
+  }
+</style>
+
+---
+
+# Давайте исправлять
+
+Шаг 3: Превратим карточку тэгов в `complementary`
+
+<div class="grid gap-4">
+
+```tsx {8,9,11}
+const Home = () => (
+  <div className="home-page">
+    <Banner />
+    <div className="container page">
+      <div className="row">
+        <MainView />
+        <div className="col-md-3">
+          <aside aria-labelledby="popular-tags-heading">
+            <p id="popular-tags-heading">Popular Tags</p>
+            <Tags />
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+```
+
+<img src="3-after-aside-highlight.webp" class="col-start-2 row-span-full" />
+
+</div>
+
+<style>
+  .grid {
+    grid-template-columns: 1fr 400px;
+  }
+</style>
+
+---
+
+# Давайте исправлять
+
+Шаг 4: Превратим панель вкладок в `tablist`
+
+<div class="grid gap-4">
+
+```tsx {all|3,4,5,7,8,11,12,14,15,17}
+const TabList = () => {
+  return (
+    <ul>
+      <li>
+        <NavLink href="/">
+          Global Feed
+        </NavLink>
+      </li>
+
+      <Maybe test={!!tag}>
+        <li>
+          <CustomLink href={`/?tag=${tag}`}>
+            <i className="ion-pound" /> {tag}
+          </CustomLink>
+        </li>
+      </Maybe>
+    </ul>
+  );
+};
+```
+
+<img src="3-after-aside.webp" class="col-start-2 row-span-full" />
+
+</div>
+
+<style>
+  .grid {
+    grid-template-columns: 1fr 400px;
+  }
+</style>
+
+---
+
+# Давайте исправлять
+
+Шаг 4: Превратим панель вкладок в `tablist`
+
+<div class="grid gap-4">
+
+```tsx {3,4,5,7,8,11,12,14,15,17}
+const TabList = () => {
+  return (
+    <ul role="tablist">
+      <li role="presentation">
+        <NavLink role="tab" href="/">
+          Global Feed
+        </NavLink>
+      </li>
+
+      <Maybe test={!!tag}>
+        <li role="presentation">
+          <CustomLink role="tab" href={`/?tag=${tag}`}>
+            <i className="ion-pound" /> {tag}
+          </CustomLink>
+        </li>
+      </Maybe>
+    </ul>
+  );
+};
+```
+
+<img src="4-after-tablist-highlight.webp" class="col-start-2 row-span-full" />
+
+</div>
+
+<style>
+  .grid {
+    grid-template-columns: 1fr 400px;
+  }
+</style>
