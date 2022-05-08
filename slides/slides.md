@@ -131,6 +131,7 @@ class: flex flex-col
 * `region` — важный раздел
 * `feed` — лента
 * `form` — форма
+* `article` — самостоятельная единица
 
 </div>
 <div class="flex-1">
@@ -142,6 +143,7 @@ class: flex flex-col
 * `button` — кнопка
 * `link` — ссылка
 * `checkbox` — галочка
+* `textbox` — текстовое поле
 
 </div>
 </div>
@@ -706,3 +708,56 @@ it('allows signing up with a username, e-mail and password', () => {
   }
 </style>
 
+---
+
+# Что стоит запомнить
+
+<div class="bg-red-100 bg-opacity-40 rounded-lg px-6 py-2 mt-8 font-semibold">
+
+Хорошая вёрстка доступна "из коробки"
+
+</div>
+
+<div class="bg-yellow-100 bg-opacity-40 rounded-lg px-6 py-2 mt-2 font-semibold">
+
+Роли — способ находить элементы так же, как это делают ваши пользователи
+
+</div>
+
+<div class="bg-green-100 bg-opacity-40 rounded-lg px-6 py-2 mt-2 font-semibold">
+
+Testing Library вам в этом поможет <logos-testing-library />
+
+</div>
+
+<div class="bg-blue-100 bg-opacity-40 rounded-lg px-6 py-2 mt-2 font-semibold">
+
+От улучшения доступности сайта выигрывают все :)
+
+</div>
+
+---
+class: flex flex-col items-center
+---
+
+# Тестируйте на одной волне с вашими пользователями
+
+<div class="flex justify-center h-2/5 gap-12">
+  <img alt="Ссылка на слайды и приложение с тестами" src="qr-github.svg" />
+  <img alt="Ссылка на мой LinkedIn" src="qr-linkedin.svg" />
+  <img alt="Ссылка на Testing Library" src="qr-testing-library.svg" />
+</div>
+
+<img alt="Исправленное приложение с тестами и слайды лежат на GitHub" src="app-and-slides-there.svg" class="absolute bottom-22 left-20 w-50" />
+
+<div class="spacer flex-1" />
+
+<Persona>
+  <logos-telegram /> &nbsp;t&period;me&sol;illright
+</Persona>
+
+<style>
+  .slidev-layout.default h1 {
+    @apply text-3xl mt-16 mb-12 font-normal text-center;
+  }
+</style>

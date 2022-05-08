@@ -1,12 +1,12 @@
 <template>
-  <div class="flex">
+  <div className="flex">
     <img
       src="https://avatars.githubusercontent.com/u/15035286"
-      class="rounded-full h-18 mr-4"
+      className="rounded-full h-18 mr-4"
     />
-    <div class="flex flex-col justify-center">
-      <div class="font-bold text-xl">Лев Челядинов</div>
-      <div class="text-lg">любит тестировать</div>
+    <div className="flex flex-col justify-center">
+      <div className="font-bold text-xl">Лев Челядинов</div>
+      <div className="text-lg"><slot>любит тестировать</slot></div>
     </div>
   </div>
 </template>
