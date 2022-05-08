@@ -149,11 +149,10 @@ class: flex flex-col
 
 После установки Testing Library для, например, Cypress, тесты можно будет писать вот так:
 
-```ts {1,2,8|3,7|4|5,6}
-// Проверим, что из ленты мы можем лайкнуть пост и перейти к нему
-it('allows liking a post and going to its page from the main feed', () => {
+```ts {1,2,7|3,6|4,5}
+// Проверим, что из ленты мы можем перейти к посту
+it('allows going to the page of a post from the main feed', () => {
   cy.findByRole('article', { name: /Create a new implementation/ }).within(() => {
-    cy.findByRole('button', { name: /Like/ }).click();
     cy.findByRole('link', { name: /Read more/ }).click();
     cy.url().should('include', '/article/Create-a-new-implementation-1');
   });
@@ -190,11 +189,5 @@ it('allows liking a post and going to its page from the main feed', () => {
     class="shadow-xl rounded"
   />
 </div>
-
----
-
-# Вот только это не сработает
-
-А теперь снова на интерфейс
 
 
