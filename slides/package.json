@@ -12,6 +12,7 @@
     "@slidev/theme-seriph": "*"
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.1.5",
     "@nuxt/kit": "npm:@nuxt/kit-edge@^3.0.0-rc.2-27530596.a862a67",
     "cypress": "^4.5.0",
     "jest": ">=20 <=26",
