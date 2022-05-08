@@ -91,7 +91,7 @@ class: flex flex-col
 Что здесь важно для пользователя?
 
 <img 
-  src="conduit-screenshot.jpg" 
+  src="conduit-screenshot.webp" 
   alt="Интерфейс сайта Conduit" 
   class="shadow-xl rounded" 
 />
