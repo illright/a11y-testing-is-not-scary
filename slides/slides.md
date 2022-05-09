@@ -1,5 +1,6 @@
 ---
 title: Тестирование доступности — это не страшно
+favicon: '/favicon.ico'
 layout: cover
 ---
 
