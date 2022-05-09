@@ -2,6 +2,15 @@
 title: Тестирование доступности — это не страшно
 favicon: '/favicon.ico'
 layout: cover
+fonts:
+  sans: 'Open Sans'
+  mono: 'Fira Code'
+  custom:
+    - 'Raleway'
+  weights:
+    - 400
+    - 600
+    - 700
 ---
 
 # Тестирование доступности —<br />это не страшно
