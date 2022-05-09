@@ -27,17 +27,18 @@ jobs:
         with:
           node-version: '18'
           cache: 'pnpm'
+          cache-dependency-path: 'slides/pnpm-lock.yaml'
 
       - name: Install dependencies 🔧
         run: pnpm install
 
       - name: Build 🧱
-        run: pnpm build
+        run: pnpm build --base /a11y-testing-is-not-scary/
 
       - name: Deploy to GitHub Pages 🛫
         uses: crazy-max/ghaction-github-pages@f778ace2db9d289df3c0012099a08f9d4ebbe8c4
         with:
-          build_dir: dist
+          build_dir: slides/dist
           jekyll: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
