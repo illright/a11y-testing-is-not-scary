@@ -206,7 +206,8 @@ it('allows going to the page of a post from the main feed', () => {
 ```
 
 <div v-click class="flex-1 flex items-end">
-  Заметили тестирование доступности? А оно есть 😎
+  Заметили тестирование доступности? А оно есть 
+  <emojione-smiling-face-with-sunglasses />
 </div>
 
 <style>
@@ -221,7 +222,7 @@ it('allows going to the page of a post from the main feed', () => {
 
 # Вот только это не сработает
 
-Посмотрим на дерево доступности на сайте Conduit 💩
+Посмотрим на дерево доступности на сайте Conduit <emojione-pile-of-poo />
 
 <div class="flex justify-between h-100">
   <img 
@@ -631,7 +632,7 @@ it('allows signing up with a username, e-mail and password', () => {
 
 <div class="bg-red-100 bg-opacity-30 rounded-l rounded-r-lg px-4 py-2 border-l-3 border-red-700 mt-6 mb-4">
 
-⚠️ Плейсхолдеры — не замена доступным меткам!
+<emojione-warning /> Плейсхолдеры — не замена доступным меткам!
 
 </div>
 
@@ -666,7 +667,7 @@ it('allows signing up with a username, e-mail and password', () => {
 
 <div class="bg-red-100 bg-opacity-30 rounded-l rounded-r-lg px-4 py-2 border-l-3 border-red-700 mt-6 mb-4">
 
-⚠️ Плейсхолдеры — не замена доступным меткам!
+<emojione-warning /> Плейсхолдеры — не замена доступным меткам!
 
 </div>
 

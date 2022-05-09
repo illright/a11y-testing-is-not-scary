@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify-json/emojione': ^1.1.1
   '@iconify-json/logos': ^1.1.5
   '@nuxt/kit': npm:@nuxt/kit-edge@^3.0.0-rc.2-27530596.a862a67
   '@slidev/cli': ^0.31.2
@@ -16,6 +17,7 @@ dependencies:
   '@slidev/theme-seriph': 0.21.2
 
 devDependencies:
+  '@iconify-json/emojione': 1.1.1
   '@iconify-json/logos': 1.1.5
   '@nuxt/kit': /@nuxt/kit-edge/3.0.0-rc.2-27530596.a862a67
   cypress: 4.12.1
@@ -417,6 +419,12 @@ packages:
     dependencies:
       '@iconify/types': 1.1.0
     dev: false
+
+  /@iconify-json/emojione/1.1.1:
+    resolution: {integrity: sha512-cO097r6ZhX3E1KhWjkIs4urzmKrbLKxt6Z0+t/DPT1om0FJONYxbdDWWXZ4VsDUPn0nnCwlY6VjX97EcxbUE8g==}
+    dependencies:
+      '@iconify/types': 1.1.0
+    dev: true
 
   /@iconify-json/logos/1.1.5:
     resolution: {integrity: sha512-PVBTp7fZ7zNBDdCCqN9IqJt78jO4f8agtiNVwxWfflmEGi3+Fu95Jre0CYAPDalyy862r46DXg8AiCoNENQ3SQ==}
