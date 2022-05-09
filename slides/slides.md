@@ -22,7 +22,7 @@ fonts:
 <div class="flex flex-1 justify-between items-end mb-4">
   <Persona />
 
-  <img src="merge-conference-logo.svg" class="h-18" />
+  <img src="/merge-conference-logo.svg" class="h-18" />
 </div>
 
 <style>
@@ -102,9 +102,9 @@ class: flex flex-col
 # А что же пользователь?
 
 <div class="flex items-center flex-1 gap-2">
-  <img src="comic-part-1.svg" />
-  <img src="comic-part-2.svg" />
-  <img src="comic-part-3.svg" />
+  <img src="/comic-part-1.svg" />
+  <img src="/comic-part-2.svg" />
+  <img src="/comic-part-3.svg" />
 </div>
 
 <style>
@@ -120,7 +120,7 @@ class: flex flex-col
 Что здесь важно для пользователя?
 
 <img 
-  src="conduit-home-screenshot.webp" 
+  src="/conduit-home-screenshot.webp" 
   alt="Интерфейс главной страницы сайта Conduit" 
   class="shadow-xl rounded" 
 />
@@ -225,12 +225,12 @@ it('allows going to the page of a post from the main feed', () => {
 
 <div class="flex justify-between h-100">
   <img 
-    src="conduit-home-screenshot.webp" 
+    src="/conduit-home-screenshot.webp" 
     alt="Интерфейс главной страницы сайта Conduit, опять" 
     class="shadow-xl rounded w-11/16 self-start"
   />
   <img 
-    src="conduit-home-accessibility-tree.webp" 
+    src="/conduit-home-accessibility-tree.webp" 
     alt="Дерево доступности главной страницы сайта Conduit" 
     class="shadow-xl rounded h-full"
   />
@@ -255,7 +255,7 @@ const MainView = () => (
 );
 ```
 
-<img src="0-before.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit до изменений" />
+<img src="/0-before.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit до изменений" />
 
 </div>
 
@@ -286,7 +286,7 @@ const MainView = () => (
 );
 ```
 
-<img src="1-after-feed-highlight.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit после создания feed, с выделением измененной части" />
+<img src="/1-after-feed-highlight.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit после создания feed, с выделением измененной части" />
 
 </div>
 
@@ -317,7 +317,7 @@ const ArticlePreview = ({ article }) => {
 };
 ```
 
-<img src="1-after-feed.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit после создания feed" />
+<img src="/1-after-feed.webp" class="shadow-xl rounded" alt="Дерево доступности главной страницы Conduit после создания feed" />
 
 </div>
 
@@ -348,7 +348,7 @@ const ArticlePreview = ({ article }) => {
 };
 ```
 
-<img src="2-after-article-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки article, с выделением измененной части" />
+<img src="/2-after-article-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки article, с выделением измененной части" />
 
 <div v-click>
 
@@ -392,7 +392,7 @@ const Home = () => (
 );
 ```
 
-<img src="2-after-article.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки article" />
+<img src="/2-after-article.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки article" />
 
 </div>
 
@@ -429,7 +429,7 @@ const Home = () => (
 );
 ```
 
-<img src="3-after-aside-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки complementary, с выделением измененной части" />
+<img src="/3-after-aside-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки complementary, с выделением измененной части" />
 
 </div>
 
@@ -469,7 +469,7 @@ const TabList = () => {
 };
 ```
 
-<img src="3-after-aside.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки complementary" />
+<img src="/3-after-aside.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки complementary" />
 
 </div>
 
@@ -509,7 +509,7 @@ const TabList = () => {
 };
 ```
 
-<img src="4-after-tablist-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки tablist, с выделением измененной части" />
+<img src="/4-after-tablist-highlight.webp" class="shadow-xl rounded col-start-2 row-span-full" alt="Дерево доступности главной страницы Conduit после разметки tablist, с выделением измененной части" />
 
 </div>
 
@@ -566,12 +566,12 @@ it('allows going to the page of a post from the main feed', () => {
 
 <div class="flex justify-between h-100">
   <img
-    src="conduit-sign-up-screenshot.webp" 
+    src="/conduit-sign-up-screenshot.webp" 
     alt="Интерфейс формы регистрации сайта Conduit" 
     class="shadow-xl rounded w-11/18 self-start"
   />
   <img
-    src="conduit-sign-up-accessibility-tree.webp" 
+    src="/conduit-sign-up-accessibility-tree.webp" 
     alt="Дерево доступности формы регистрации сайта Conduit" 
     class="shadow-xl rounded h-full"
   />
@@ -752,13 +752,13 @@ class: flex flex-col items-center
 
 # Тестируйте на одной волне с вашими пользователями
 
-<div class="flex justify-center h-2/5 gap-12">
-  <img alt="Ссылка на слайды и приложение с тестами" src="qr-github.svg" />
-  <img alt="Ссылка на мой LinkedIn" src="qr-linkedin.svg" />
-  <img alt="Ссылка на Testing Library" src="qr-testing-library.svg" />
+<div class="flex justify-center gap-8">
+  <img alt="Ссылка на слайды и приложение с тестами" src="/qr-github.svg" class="w-48" />
+  <img alt="Ссылка на мой LinkedIn" src="/qr-linkedin.svg" class="w-48" />
+  <img alt="Ссылка на Testing Library" src="/qr-testing-library.svg" class="w-48" />
 </div>
 
-<img alt="Исправленное приложение с тестами и слайды лежат на GitHub" src="app-and-slides-there.svg" class="absolute bottom-22 left-20 w-50" />
+<img alt="Исправленное приложение с тестами и слайды лежат на GitHub" src="/app-and-slides-there.svg" class="absolute bottom-22 left-20 w-50" />
 
 <div class="spacer flex-1" />
 
