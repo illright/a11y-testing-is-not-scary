@@ -1,6 +1,8 @@
 ---
 title: Тестирование доступности — это не страшно
 favicon: '/favicon.ico'
+lineNumbers: true
+highlighter: 'shiki'
 layout: cover
 fonts:
   sans: 'Open Sans'
@@ -419,8 +421,8 @@ const Home = () => (
       <div className="row">
         <MainView />
         <div className="col-md-3">
-          <aside aria-labelledby="popular-tags-heading">
-            <p id="popular-tags-heading">Popular Tags</p>
+          <aside aria-labelledby="popular-tags">
+            <p id="popular-tags">Popular Tags</p>
             <Tags />
           </aside>
         </div>
@@ -539,7 +541,7 @@ it('allows going to the page of a post from the main feed', () => {
 <div class="spacer flex-1" />
 
 <pre class="leading-snug py-4 border-2 border-green-500 rounded-lg">
-  Running:  read-posts.spec.ts                                                            (3 of 3)
+  Running:  read-posts.spec.ts                                                       (3 of 3)
 
   <span class="text-green-500 font-bold">✓</span> lists all posts on the main page (1374ms)
   <span class="text-green-500 font-bold">✓</span> allows going to the page of a post from the main feed (1798ms)
@@ -630,7 +632,7 @@ it('allows signing up with a username, e-mail and password', () => {
 </form>
 ```
 
-<div class="bg-red-100 bg-opacity-30 rounded-l rounded-r-lg px-4 py-2 border-l-3 border-red-700 mt-6 mb-4">
+<div class="bg-red-100 bg-opacity-30 rounded-l rounded-r-lg px-4 py-2 border-l-3 border-red-700 mt-2 mb-4">
 
 <emojione-warning /> Плейсхолдеры — не замена доступным меткам!
 
@@ -665,7 +667,7 @@ it('allows signing up with a username, e-mail and password', () => {
 </form>
 ```
 
-<div class="bg-red-100 bg-opacity-30 rounded-l rounded-r-lg px-4 py-2 border-l-3 border-red-700 mt-6 mb-4">
+<div class="bg-red-100 bg-opacity-30 rounded-l rounded-r-lg px-4 py-2 border-l-3 border-red-700 mt-2 mb-4">
 
 <emojione-warning /> Плейсхолдеры — не замена доступным меткам!
 
@@ -701,7 +703,7 @@ it('allows signing up with a username, e-mail and password', () => {
 <div class="spacer flex-1" />
 
 <pre class="leading-snug py-4 border-2 border-green-500 rounded-lg">
-  Running:  authentication.spec.ts                                                        (1 of 3)
+  Running:  authentication.spec.ts                                                   (1 of 3)
 
   <span class="text-green-500 font-bold">✓</span> allows signing up with a username, e-mail and password (2961ms)
 
