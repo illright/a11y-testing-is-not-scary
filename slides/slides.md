@@ -756,13 +756,13 @@ class: flex flex-col items-center
 
 # Тестируйте на одной волне с вашими пользователями
 
-<div class="flex justify-center gap-8">
+<div class="flex justify-center gap-28">
   <img alt="Ссылка на слайды и приложение с тестами" src="/qr-github.svg" class="w-48" />
   <img alt="Ссылка на мой LinkedIn" src="/qr-linkedin.svg" class="w-48" />
   <img alt="Ссылка на Testing Library" src="/qr-testing-library.svg" class="w-48" />
 </div>
 
-<img alt="Исправленное приложение с тестами и слайды лежат на GitHub" src="/app-and-slides-there.svg" class="absolute bottom-22 left-20 w-50" />
+<img alt="Исправленное приложение с тестами и слайды лежат на GitHub" src="/app-and-slides-there.svg" class="absolute bottom-15 left-20 w-50" />
 
 <div class="spacer flex-1" />
 
