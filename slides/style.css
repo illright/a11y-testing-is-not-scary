@@ -7,3 +7,7 @@ h1 {
     @apply text-2xl font-bold
   }
 }
+
+.slidev-code {
+  @apply font-semibold;
+}
