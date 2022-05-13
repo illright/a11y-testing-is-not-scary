@@ -209,8 +209,7 @@ it('allows going to the page of a post from the main feed', () => {
 ```
 
 <div v-click class="flex-1 flex items-end">
-  Заметили тестирование доступности? А оно есть 
-  <emojione-smiling-face-with-sunglasses />
+  Заметили тестирование доступности? А оно есть&nbsp;<emojione-smiling-face-with-sunglasses />
 </div>
 
 <style>
