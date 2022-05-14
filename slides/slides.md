@@ -1,7 +1,7 @@
 ---
 title: Тестирование доступности — это не страшно
 exportFilename: 'slides-a11y-testing-is-not-scary.pdf'
-download: https://github.com/illright/a11y-testing-is-not-scary/releases/download/1.0.0/slides-a11y-testing-is-not-scary.pdf
+download: https://github.com/illright/a11y-testing-is-not-scary/releases/download/1.0.1/slides-a11y-testing-is-not-scary.pdf
 favicon: '/favicon.ico'
 lineNumbers: true
 highlighter: 'shiki'
