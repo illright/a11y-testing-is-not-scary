@@ -1,7 +1,7 @@
 ---
 title: Тестирование доступности — это не страшно
 exportFilename: 'slides-a11y-testing-is-not-scary.pdf'
-download: https://github.com/illright/a11y-testing-is-not-scary/releases/download/1.0.1/slides-a11y-testing-is-not-scary.pdf
+download: https://github.com/illright/a11y-testing-is-not-scary/releases/download/1.0.2/slides-a11y-testing-is-not-scary.pdf
 favicon: '/favicon.ico'
 lineNumbers: true
 highlighter: 'shiki'
@@ -681,6 +681,22 @@ it('allows signing up with a username, e-mail and password', () => {
     --slidev-code-font-size: 1rem;
     --slidev-code-padding: 1rem;
     --slidev-code-line-height: 1.5rem;
+  }
+</style>
+
+---
+
+# Вот как это теперь выглядит
+
+<img
+  src="/conduit-sign-up-labels.webp" 
+  alt="Интерфейс формы регистрации сайта Conduit с метками для полей" 
+  class="shadow-xl rounded mt-8"
+/>
+
+<style>
+  .slidev-layout h1 + p {
+    opacity: 1;
   }
 </style>
 
