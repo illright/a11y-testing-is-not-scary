@@ -6,8 +6,8 @@
   
   _Test on the same page with your users!_
   
-  <!--<a>
-    <img alt="Talk in Russian" src="./.github/readme-assets/talk-en.svg" height="36" /></a>-->
+  <a href="https://youtu.be/t3goFFU-pJo">
+    <img alt="Talk in Russian" src="./.github/readme-assets/talk-en.svg" height="36" /></a>
   <a href="https://illright.github.io/a11y-testing-is-not-scary/">
     <img alt="Slides in Russian" src="https://github.com/illright/a11y-testing-is-not-scary/raw/main/.github/readme-assets/slides-en.svg" height="36" /></a>
   <a href="./README.ru.md">

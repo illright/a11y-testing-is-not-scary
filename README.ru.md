@@ -6,8 +6,8 @@
   
   _Тестируйте на одной волне с вашими пользователями!_
   
-  <!--<a>
-    <img alt="Запись доклада" src="./.github/readme-assets/talk-ru.svg" height="36" /></a>-->
+  <a href="https://youtu.be/t3goFFU-pJo">
+    <img alt="Запись доклада" src="./.github/readme-assets/talk-ru.svg" height="36" /></a>
   <a href="https://illright.github.io/a11y-testing-is-not-scary/">
     <img alt="Слайды" src="https://github.com/illright/a11y-testing-is-not-scary/raw/main/.github/readme-assets/slides-ru.svg" height="36" /></a>
   <a href="./README.md">
