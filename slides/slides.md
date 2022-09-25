@@ -782,10 +782,6 @@ class: flex flex-col items-center
 
 <div class="spacer flex-1" />
 
-<Persona>
-  <logos-telegram /> &nbsp;t&period;me&sol;illright
-</Persona>
-
 <style>
   .slidev-layout.default h1 {
     @apply text-3xl mt-16 mb-12 font-normal text-center;
